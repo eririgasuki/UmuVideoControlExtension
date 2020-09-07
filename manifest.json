@@ -1,0 +1,28 @@
+{
+  "name": "UmuVideoControl",
+  "description": "controlUmuVideoPlayer",
+  "version": "1.0",
+  "manifest_version": 2,
+  "permissions": ["https://*.umu.cn/*", "activeTab"],
+  "content_scripts": [{
+    "matches": ["https://*.umu.cn/*"],
+    "js": ["videoControl.js"]
+  }],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "favicon.png",
+      "32": "favicon.png",
+      "64": "favicon.png"
+    }
+  },
+  "icons": {
+    "16": "favicon.png",
+    "32": "favicon.png",
+    "64": "favicon.png",
+    "128": "favicon.png"
+  }
+}
